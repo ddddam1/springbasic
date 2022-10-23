@@ -6,6 +6,7 @@ import org.springframework.beans.factory.InitializingBean;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+//public class NetworkClient implements InitializingBean, DisposableBean {
 public class NetworkClient {
 
     private String url;
@@ -15,6 +16,7 @@ public class NetworkClient {
     }
 
     public void setUrl(String url) {
+        System.out.println("NetworkClient.setUrl");
         this.url = url;
     }
 
@@ -44,4 +46,17 @@ public class NetworkClient {
         System.out.println("NetworkClient.close");
         disconnect();
     }
+
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        connect();
+//        call("초기화 연결 메시지");
+//    }
+//
+//    @Override
+//    public void destroy() throws Exception {
+//        disconnect();
+//    }
+
+
 }

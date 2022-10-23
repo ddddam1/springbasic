@@ -27,7 +27,7 @@ public class PrototypeTest {
     }
 
     @Scope("prototype")
-    public class PrototypeBean {
+    static class PrototypeBean {
         @PostConstruct
         public void init() {
             System.out.println("SingletonBean.init");
